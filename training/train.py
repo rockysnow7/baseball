@@ -1,6 +1,6 @@
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import r2_score
+from sklearn.metrics import r2_score, mean_absolute_error
 
 # import optuna
 import pandas as pd
@@ -86,7 +86,10 @@ model = xgb.train(
 )
 
 best_score = model.best_score
-r2 = r2_score(y_test, model.predict(dtest))
+y_pred = model.predict(dtest)
+r2 = r2_score(y_test, y_pred)
+mae = mean_absolute_error(y_test, y_pred)
 print()
 print(f"best_score: {best_score}")
 print(f"r2: {r2}")
+print(f"mae: {mae}")

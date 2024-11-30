@@ -17,7 +17,7 @@ currently, i am working with a dataset of team-level data of most games from 201
 ## results so far
 
 so far, i have trained an XGBoost model on the 2016-2021 data, with hyperparameters tuned using optuna.
-this model gets an RMSE of ~3.0 and an R^2 of ~0.1 on the test set. this is bad, so i am going to try some other models to see if i can get better results.
+this model gets RMSE=~3.0, R^2=~0.1, and MAE=2.37 on the test set. this is not great, so i am going to try some other models to see if i can get better results.
 
 ## notes
 
